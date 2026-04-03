@@ -13,8 +13,8 @@ import Contacts from "./pages/Contacts";
 import { refreshUser } from "./redux/auth/operations";
 import { selectIsRefreshing } from "./redux/auth/selectors";
 
-import { PrivateRoute } from "./components/PrivateRoute";
-import { RestrictedRoute } from "./components/RestrictedRoute";
+import PrivateRoute from "./components/PrivateRoute";
+import RestrictedRoute from "./components/RestrictedRoute";
 
 export default function App() {
   const dispatch = useDispatch();
