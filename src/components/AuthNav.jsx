@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-const AppBar = () => {
+export default function AuthNav() {
   return (
     <header style={{ padding: "10px", borderBottom: "1px solid #ccc" }}>
       <nav style={{ display: "flex", gap: "10px" }}>
@@ -11,6 +11,4 @@ const AppBar = () => {
       </nav>
     </header>
   );
-};
-
-export default AppBar;
+}
