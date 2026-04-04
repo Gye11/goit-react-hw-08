@@ -4,7 +4,7 @@ export default function Navigation() {
   return (
     <nav>
       <NavLink to="/" end>
-        <Home />
+        Home
       </NavLink>
       <NavLink to="/contacts">Contacts</NavLink>
       <NavLink to="/login">Login</NavLink>
