@@ -6,7 +6,6 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const form = e.target;
 
     dispatch(
@@ -21,8 +20,16 @@ export default function Login() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input name="email" placeholder="Email" />
-      <input name="password" type="password" placeholder="Password" />
+      <h2>Login</h2>
+
+      <input name="email" placeholder="📧 Email" required />
+      <input
+        name="password"
+        type="password"
+        placeholder="🔒 Password"
+        required
+      />
+
       <button type="submit">Login</button>
     </form>
   );

@@ -16,7 +16,7 @@ export default function App() {
         <Route index element={<Home />} />
 
         <Route
-          path="/login"
+          path="login"
           element={
             <RestrictedRoute>
               <Login />
@@ -25,7 +25,7 @@ export default function App() {
         />
 
         <Route
-          path="/register"
+          path="register"
           element={
             <RestrictedRoute>
               <Registration />
@@ -34,7 +34,7 @@ export default function App() {
         />
 
         <Route
-          path="/contacts"
+          path="contacts"
           element={
             <PrivateRoute>
               <Contacts />

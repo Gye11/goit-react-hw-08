@@ -6,7 +6,6 @@ export default function Registration() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const form = e.target;
 
     dispatch(
@@ -22,9 +21,17 @@ export default function Registration() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input name="name" placeholder="Name" />
-      <input name="email" placeholder="Email" />
-      <input name="password" type="password" placeholder="Password" />
+      <h2>Register</h2>
+
+      <input name="name" placeholder="👤 Name" required />
+      <input name="email" placeholder="📧 Email" required />
+      <input
+        name="password"
+        type="password"
+        placeholder="🔒 Password"
+        required
+      />
+
       <button type="submit">Register</button>
     </form>
   );
