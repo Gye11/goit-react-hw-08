@@ -20,19 +20,23 @@ export default function Registration() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Register</h2>
+    <div className="auth-container">
+      <form onSubmit={handleSubmit} className="auth-form">
+        <h2>Create Account ✨</h2>
 
-      <input name="name" placeholder="👤 Name" required />
-      <input name="email" placeholder="📧 Email" required />
-      <input
-        name="password"
-        type="password"
-        placeholder="🔒 Password"
-        required
-      />
+        <input name="name" type="text" placeholder="👤 Name" required />
 
-      <button type="submit">Register</button>
-    </form>
+        <input name="email" type="email" placeholder="📧 Email" required />
+
+        <input
+          name="password"
+          type="password"
+          placeholder="🔒 Password"
+          required
+        />
+
+        <button type="submit">Register</button>
+      </form>
+    </div>
   );
 }

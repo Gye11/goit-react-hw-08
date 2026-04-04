@@ -1,11 +1,14 @@
 import { Outlet } from "react-router-dom";
-import AppBar from "./AppBar";
+import Navigation from "./Navigation";
+import "../App.css";
 
 export default function Layout() {
   return (
     <div className="container">
-      <AppBar />
-      <Outlet />
+      <Navigation />
+      <div className="page">
+        <Outlet />
+      </div>
     </div>
   );
 }
