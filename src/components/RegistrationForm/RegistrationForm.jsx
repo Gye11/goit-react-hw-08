@@ -23,28 +23,15 @@ export default function RegistrationForm() {
       <form onSubmit={handleSubmit} className={css.form}>
         <h2 className={css.title}>Create Account</h2>
 
-        <input
-          name="name"
-          type="text"
-          placeholder="👤 Name"
-          required
-          className={css.input}
-        />
+        <input name="name" type="text" placeholder="👤 Name" required />
 
-        <input
-          name="email"
-          type="email"
-          placeholder="📧 Email"
-          required
-          className={css.input}
-        />
+        <input name="email" type="email" placeholder="📧 Email" required />
 
         <input
           name="password"
           type="password"
           placeholder="🔒 Password"
           required
-          className={css.input}
         />
 
         <button type="submit" className={css.button}>
