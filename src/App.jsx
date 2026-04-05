@@ -1,22 +1,33 @@
-import { Routes, Route } from "react-router-dom";
-import Layout from "./components/Layout";
+import "./App.css";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { refreshUser } from "./redux/auth/operations";
 
+import { Routes, Route } from "react-router-dom";
+
+import Layout from "./components/Layout/Layout";
 import Home from "./pages/Home";
 import Contacts from "./pages/Contacts";
 import Login from "./pages/Login";
 import Registration from "./pages/Registration";
 
-import { PrivateRoute } from "./components/PrivateRoute";
-import { RestrictedRoute } from "./components/RestrictedRoute";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import RestrictedRoute from "./components/RestrictedRoute/RestrictedRoute";
 
 export default function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(refreshUser());
+  }, [dispatch]);
+
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
 
         <Route
-          path="login"
+          path="/login"
           element={
             <RestrictedRoute>
               <Login />
@@ -25,7 +36,7 @@ export default function App() {
         />
 
         <Route
-          path="register"
+          path="/register"
           element={
             <RestrictedRoute>
               <Registration />
@@ -34,7 +45,7 @@ export default function App() {
         />
 
         <Route
-          path="contacts"
+          path="/contacts"
           element={
             <PrivateRoute>
               <Contacts />

@@ -8,7 +8,7 @@ const initialState = {
   isRefreshing: false,
 };
 
-const slice = createSlice({
+const authSlice = createSlice({
   name: "auth",
   initialState,
   extraReducers: (builder) => {
@@ -42,4 +42,4 @@ const slice = createSlice({
   },
 });
 
-export const authReducer = slice.reducer;
+export default authSlice.reducer;
