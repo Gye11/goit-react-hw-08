@@ -1,6 +1,19 @@
 import { configureStore } from "@reduxjs/toolkit";
-import storage from "redux-persist/lib/storage";
 import { persistStore, persistReducer } from "redux-persist";
+
+const storage = {
+  getItem: (key) => {
+    return Promise.resolve(localStorage.getItem(key));
+  },
+  setItem: (key, value) => {
+    localStorage.setItem(key, value);
+    return Promise.resolve();
+  },
+  removeItem: (key) => {
+    localStorage.removeItem(key);
+    return Promise.resolve();
+  },
+};
 
 import authReducer from "./auth/slice";
 import contactsReducer from "./contacts/slice";
